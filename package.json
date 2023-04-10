@@ -1,13 +1,15 @@
 {
-  "name": "ts-api-boilerplate",
+  "name": "ts-node-boilerplate",
   "version": "1.0.0",
-  "description": "Simple boilerplate for APIs with Node.js, Express and Typescript",
+  "description": "A boilerplate for Node.js projects using TypeScript with eslint and jest",
   "main": "/src/index.ts",
   "scripts": {
     "dev": "set NODE_ENV=development && nodemon -r tsconfig-paths/register src/index.ts",
     "start": "set NODE_ENV=production && node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/index.js",
     "build": "tsc",
     "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "lint": "eslint --ext .ts src/"
   },
   "keywords": [],
@@ -26,7 +28,7 @@
     "nodemon": "^2.0.22",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.2.0",
+    "tsconfig-paths": "^4.2.0", 
     "typescript": "^5.0.4"
   },
   "dependencies": {

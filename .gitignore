@@ -9,3 +9,6 @@ dist/
 
 # Log files
 logs/
+
+# Test coverage
+coverage/

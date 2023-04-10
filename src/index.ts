@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import Logger from '~/lib/Logger';
 
 dotenv.config({
-  path: process.env.NODE_ENV === 'test' ? '.env.test.local' : '.env.dev.local',
+  path: process.env.NODE_ENV === 'development' ? '.env.dev.local' : '.env.prod.local',
 });
 
 const logger = Logger(process.env.NODE_ENV, process.env.LOG_DIR);
