@@ -4,8 +4,8 @@
   "description": "A boilerplate for Node.js projects using TypeScript with eslint and jest",
   "main": "/src/index.ts",
   "scripts": {
-    "dev": "set NODE_ENV=development && nodemon -r tsconfig-paths/register src/index.ts",
-    "start": "set NODE_ENV=production && node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/index.js",
+    "dev": "nodemon -r tsconfig-paths/register -r dotenv/config src/index.ts dotenv_config_path=.env.dev.local",
+    "start": "node -r ts-node/register/transpile-only -r tsconfig-paths/register -r dotenv/config dist/index.js dotenv_config_path=.env.prod.local",
     "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",

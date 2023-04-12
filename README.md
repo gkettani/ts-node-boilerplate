@@ -12,6 +12,8 @@ This is a small boilerplate for nodeJS using Typescript, Eslint and Jest.
 `npm run test:coverage` | Run tests with coverage  
 `npm run lint` | Run linter
 
+### Environment variables
+Create a `.env.dev.local` for development environment or `.env.prod.local` for production environment and copy all environment variables from the `.env.example`
 
 ### Eslint
 Extends from airbnb-base-config for eslint + custom rules (see rules in .eslintrc.json)
@@ -28,5 +30,3 @@ Uses Jest for unit testing
 ### VScode extensions:
 - ESlint
 
-### Environment variables
-Create a `.env.{environment}.local` ( where {environment} is either dev or prod ) and copy all environment variables from the `.env.example`
