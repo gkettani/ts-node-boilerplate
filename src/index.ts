@@ -1,5 +1,5 @@
 import { createServer, IncomingMessage, ServerResponse } from 'http';
-import Logger from '~/lib/Logger';
+import { Logger } from '~/lib/Logger';
 
 const logger = Logger(process.env.NODE_ENV, process.env.LOG_DIR);
 
