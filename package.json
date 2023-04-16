@@ -4,9 +4,9 @@
   "description": "A boilerplate for Node.js projects using TypeScript with eslint and jest",
   "main": "/src/index.ts",
   "scripts": {
-    "dev": "nodemon -r tsconfig-paths/register -r dotenv/config src/index.ts dotenv_config_path=.env.dev.local",
-    "start": "node -r ts-node/register/transpile-only -r tsconfig-paths/register -r dotenv/config dist/index.js dotenv_config_path=.env.prod.local",
-    "build": "tsc",
+    "dev": "nodemon -r tsconfig-paths/register -r dotenv/config src/index.ts dotenv_config_path=.env.local",
+    "start": "node dist/index.js",
+    "build": "rimraf ./dist && tsc && tsc-alias",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -20,19 +20,21 @@
     "@types/node": "^18.15.11",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
+    "dotenv": "^16.0.3",
     "eslint": "^8.38.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-import-resolver-typescript": "^3.5.5",
     "eslint-plugin-import": "^2.27.5",
     "jest": "^29.5.0",
     "nodemon": "^2.0.22",
+    "rimraf": "^5.0.0",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.2.0", 
+    "tsc-alias": "^1.8.5",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "dotenv": "^16.0.3",
     "winston": "^3.8.2"
   }
 }
