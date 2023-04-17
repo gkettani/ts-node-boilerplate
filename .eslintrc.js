@@ -34,6 +34,7 @@ module.exports = {
     "import/no-extraneous-dependencies": "off",
     "no-trailing-spaces": 1,
     "arrow-body-style": "off",
+    "import/no-unresolved": "off",
     "import/order": [
       "error",
       {
